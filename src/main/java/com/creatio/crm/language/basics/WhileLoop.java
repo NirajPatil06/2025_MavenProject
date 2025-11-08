@@ -14,7 +14,7 @@ public class WhileLoop {
 			if (i > 100) {
 				break;
 			}
-			System.out.println("Refresh the Page");
+			System.out.println("Refresh the Page" + i);
 			i++;
 		}
 
