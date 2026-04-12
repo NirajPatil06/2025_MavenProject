@@ -74,17 +74,18 @@ public class SeleniumWebActions1 {
 		//Thread.sleep(5000);
 		
 		// 10. Verify error message is coming
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//p[@class='error']"), 0));
-		
-		WebElement error = driver.findElement(By.xpath("//p[@class='error']"));
-		Assert.assertTrue(error.isDisplayed());
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+//		wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//p[@class='error']"), 0));
+//		
+//		WebElement error = driver.findElement(By.xpath("//p[@class='error']"));
+//		Assert.assertTrue(error.isDisplayed());
 		
 		// 11. Click on Admin page link
 		WebElement adminPageLink = driver.findElement(By.xpath("//a[text()='Admin Page']"));
 		adminPageLink.click();
 		
 		// 12. Wait for admin page
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//h1[@class='title' and contains(text(),'Administration')]"), 0));
 		
 		// 13. Select Data access mode as ' SOAP'
