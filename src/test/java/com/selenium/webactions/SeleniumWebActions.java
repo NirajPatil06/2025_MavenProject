@@ -85,7 +85,7 @@ public class SeleniumWebActions {
 		// Scroll and Click on the hidden element when element is at the bottom of the page
 		js.executeScript("arguments[0].scrollToElement()", button); //scroll
 		js.executeScript("arguments[0].click()", button);//then click
-		
+		js.executeScript("arguments[0].scrollIntoView();arguments[0].click();",button);// scroll and click
 		/********** Textbox Element **********/
 		
 		WebElement textbox = driver.findElement(By.xpath("//input"));
